@@ -308,7 +308,7 @@
     "message1": "Uptime du Bot : "
   },
   "checkversion": {
-    "message1": "La version actuelle de votre bot est :"
+    "message1": "version actuelle : "
   },
   "antilink": {
     "message1": "L'antilink est déjà activé.",

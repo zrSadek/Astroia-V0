@@ -32,7 +32,7 @@ module.exports = {
         const updatebot = (await client.lang('version.maj')).replace("{prefix}", `${client.prefix}`);
         message.channel.send({ content: updatebot });
       } else if (response.data.message === await client.lang(`version.message2`)) {
-        message.channel.send({ content: await client.lang('version.nomaj') });
+        message.channel.send({ content: await client.lang('version.nomaj') + ' ' + await client.lang(`checkversion.message1`) + `\`${client.version}\`` });
       }
     } catch (error) {
       console.error(error);
