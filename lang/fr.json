@@ -1,0 +1,482 @@
+{
+  "prefixbot": "Mon préfixe est :",
+  "perm": "Vous n'avez pas la permission.",
+  "noperminterac": "Vous n'êtes pas autorisé à utiliser cette interaction.",
+  "erreur": "Une erreur s'est produite.",
+  "ping": {
+    "chargement": "Chargement en cours...",
+    "api": "Latence de l'API de Discord :",
+    "bot": "Latence du bot :"
+  },
+  "langue": {
+    "deja": "La langue du bot est déjà :",
+    "set": "Langue du bot définie sur `{langCode}`.",
+    "erreur": "Veuillez spécifier une langue (ex: fr, en, ar, etc.)",
+    "invalide": "Langue invalide. Veuillez utiliser l'une des langues prises en charge (fr, en)."
+  },
+  "servers": {
+    "server": "Mes serveurs"
+  },
+  "lock": {
+    "lock": "Les membres ne peuvent plus parler dans",
+    "erreur": "une erreur vient de se produire !",
+    "ll": "a verrouillé le salon"
+  },
+  "unlock": {
+    "unlock": "Les membres peuvent désormais parler dans",
+    "erreur": "une erreur vient de se produire !",
+    "ll": "a déverrouillé la salon"
+  },
+  "color": {
+    "erreur": "Utilisez la commande de cette façon :",
+    "set": "La couleur a été mise à jour en",
+    "embedset": "Test Couleur",
+    "invalide": "Couleur invalide."
+  },
+  "owner": {
+    "owner-valide": " est désormais owner.",
+    "owner-deja": " est déjà owner.",
+    "erreur": "Utilisateur introuvable.",
+    "id": "Veuillez mentionner un utilisateur ou fournir l'ID d'un utilisateur valide.",
+    "titre": "Liste des Owners",
+    "personnes": "personnes ont été supprimées",
+    "personne": "personne a été supprimée",
+    "liste": "de la liste des owners",
+    "perm": "Vous n'avez pas la permission d'utiliser cette commande."
+  },
+  "alladmin": {
+    "embedtitle": "Liste des Admin",
+    "noadmin": "Il n'y a pas d'admin sur ce serveur."
+  },
+  "allbots": {
+    "embedtitle": "Liste des Bots",
+    "nobot": "Il n'y a pas de bot sur ce serveur."
+  },
+  "unowner": {
+    "perm": "Vous n'avez pas la permission d'utiliser cette commande.",
+    "unowner": " n'est plus owner.",
+    "unowner-deja": " n'est déjà plus owner.",
+    "erreur": "Utilisateur introuvable."
+  },
+  "version": {
+    "maj": "Votre bot n'est pas à jour, faites `{prefix}update` pour le mettre à jour !",
+    "nomaj": "Votre bot est déjà à jour !",
+    "message1": "Mise à jour disponible en attente.",
+    "message2": "Aucune mise à jour disponible.",
+    "message3": "Une erreur est survenue."
+  },
+  "update": {
+    "message1": "L'update du bot vient de commencer...",
+    "message2": "Téléchargement du bot en cours...",
+    "message3": "Mise à jour des fichiers en cours...",
+    "message4": "Le bot va redémarrer...",
+    "message5": "Le bot vient de finir l'update !",
+    "nomaj": "Votre bot est déjà à jour !",
+    "erreur": "Une erreur est survenue."
+  },
+  "prefix": {
+    "set": "Mon préfix est maitenant :",
+    "erreur": "Veuillez fournir un nouveau préfix pour le bot."
+  },
+  "booster": {
+    "nobooster": "Ce serveur n'a aucun boosters"
+  },
+  "setpic": {
+    "erreur": "Veuillez fournir une image en joignant un fichier ou en spécifiant une URL pour définir l'avatar du bot.",
+    "succes": "L'avatar du bot a été mis à jour avec succès !",
+    "erreur2": "Une erreur s'est produite lors de la mise à jour de l'avatar du bot. Veuillez vérifier que l'URL de l'image est valide."
+  },
+  "setname": {
+    "succes": "Le nom du bot a été mis à jour.",
+    "long": "Le nom est trop long.",
+    "court": "Le nom est trop court.",
+    "perm": "Vous n'avez pas la permission d'utiliser cette commande."
+  },
+  "perms": {
+    "perm": "Vous n'avez pas la permission d'utiliser cette commande."
+  },
+  "setperm": {
+    "invalide-perm": "Permission invalide.",
+    "invalide-role": "Rôle invalide.",
+    "perm": "Vous n'avez pas la permission d'utiliser cette commande.",
+    "role": "Le role",
+    "perm-add": "a bien été ajouté à la permission.",
+    "perm-deja": "est déjà dans la permission",
+    "perm-role-erreur": "n'est pas dans la permission",
+    "perm-remove": "Le rôle a bien été retiré de la permission."
+  },
+  "change": {
+    "commande": "La commande",
+    "reset": "n'a plus de commande assigné.",
+    "reset2": "Toutes les permissions des commandes ont été",
+    "invalide-perm": "Permission invalide, valide:",
+    "succes": "a été assignée à la permission"
+  },
+  "rolemembers": {
+    "norole": "Merci d'indiquer un rôle !",
+    "erreurrole": "Ce rôle n'existe pas sur ce serveur.",
+    "embedtitle": "Membres avec le rôle ",
+    "nomembre": "Aucune personne ne possède ce rôle"
+  },
+  "voicestat": {
+    "titre": "Statistiques vocales de",
+    "co": "En vocal :",
+    "stream": "Partage :",
+    "mute": "Muet :",
+    "mutecasque": "Sourdine :",
+    "cam": "Caméra :"
+  },
+  "userinfo": {
+    "introuvable": "Cet utilisateur n'existe pas ou est introuvable.",
+    "": "",
+    "usercreate": "Créé le",
+    "userjoin": "Membre depuis",
+    "message1": "Status Personalisé :",
+    "message2": "Presence :",
+    "message3": "Plateforme",
+    "message4": "Voir tous les rôles",
+    "message5": "Voir tous les badges",
+    "message6": "Lien vers son profil",
+    "message7": "Trop de rôles 😅",
+    "message8": "Aucune activité",
+    "message9": "Aucun rôles",
+    "message10": "Aucun badges",
+    "role": "Rôles",
+    "badge": "Badge",
+    "id": "ID",
+    "bot": "Bot",
+    "username": "Username"
+  },
+  "modlog": {
+    "message1": "Les logs de modération seront maintenant envoyés dans",
+    "message2": "Les logs de modération sont maintenant désactivés.",
+    "message3": "Les logs de modération sont déjà activés.",
+    "message4": "Les logs de modération sont déjà désactivés."
+  },
+  "ban": {
+    "message1": "a été **banni** pour",
+    "message2": "a banni",
+    "message3": "pour",
+    "message4": "Vous devez mentionner un utilisateur ou donner l'identifiant",
+    "aucuneraison": "Aucune raison.",
+    "pasbannir": "Vous ne pouvez pas bannir cette personne.",
+    "confirm": "Vous avez été **banni** du serveur"
+  },
+  "unban": {
+    "message1": "a été **débanni**",
+    "message2": "un utilisateur",
+    "message3": "n'existe pas ou est déja débanni",
+    "message4": "a **débanni**"
+  },
+  "activity": {
+    "invalide": "Veuillez spécifier un type d'activité valide : {prefix}activity playto`, {prefix}activity watch`, {prefix}activity listen` ou {prefix}activity stream`",
+    "set": "L'activité du bot a été changée en {activityType} {activityName}."
+  },
+  "presence": {
+    "set": "La présence du bot a été changée en",
+    "erreur": "Veuillez spécifier un statut valide :"
+  },
+  "lockall": {
+    "message1": "Tous les channels sont **lock**",
+    "message2": "a verrouillé tout les channels",
+    "message3": "une erreur vient de se produire !",
+    "message4": "Impossible de lock:"
+  },
+  "unlockall": {
+    "message1": "Tous les channels sont **unlock**",
+    "message2": "a deverrouillé tout les channels",
+    "message3": "une erreur vient de se produire !",
+    "message4": "Impossible de unlock:"
+  },
+  "slowmode": {
+    "message1": "Veuillez indiquer la latence du slowmode.",
+    "message2": "Le slowmode a été désactivé.",
+    "message3": "seconde",
+    "message4": "Le slowmode est désormais de",
+    "message5": "Selectionne entre: h, m, s",
+    "message6": "une erreur vient de se produire !",
+    "message7": "Veuillez fournir un temp valide (s = seconde , m = minute , h = heure).",
+    "embed": "à activer le slowmode sur",
+    "embed2": "dans"
+  },
+  "renew": {
+    "message1": "Recrée par",
+    "message2": "channel recrée",
+    "message3": "a récréé un channel **(nouveau salon : "
+  },
+  "autoreact": {
+    "message1": "Les messages de ce salon auront automatiquement la réaction suivante:",
+    "message2": "Les messages de ce salon ne réagiront plus automatiquement:",
+    "message3": "Il n'y a aucun émoji assigné sur ce serveur.",
+    "message4": "Autoreact",
+    "message5": "channels autoreact"
+  },
+  "serveurinfo": {
+    "owner": "Owner",
+    "date": "Crée le ",
+    "emoji": "Emoji(s)",
+    "role": "Rôle(s)",
+    "humain": "Humain(s)",
+    "bot": "Bot(s)",
+    "membre": "Membre(s)",
+    "vocal": "Vocal",
+    "channel": "Channel(s)",
+    "boost": "Boost(s)",
+    "niveau": "Niveau",
+    "nonniveau": "Aucun niveau"
+  },
+  "msglog": {
+    "message1": "Les logs de messages seront maintenant envoyés dans",
+    "message2": "Les logs de modération sont maintenant désactivés.",
+    "message3": "Tous les messages dans",
+    "message4": "seront désormais ignorés par les **logs-messages**",
+    "message5": "ne sont pas ignorés",
+    "message6": "ne seront plus ignorés par les **logs-messages**",
+    "message7": "à supprimer un message dans",
+    "message8": "Message supprimé dans",
+    "message9": "Auteur du message : ",
+    "message10": "Inconnu",
+    "message11": "Aucun message",
+    "message12": "Un embed a été supprimé dans le channel `{channel.name}` (`{channel.id}`), voici l'embed :",
+    "message13": "Message modifié dans",
+    "message14": "Ancien message",
+    "message15": "Nouveau message"
+  },
+  "tempmute": {
+    "mute": "**{membre}** à été tempmute **{duration}** pour `{raison}`.",
+    "membre": "Veuillez indiquer un membre",
+    "invalidemembre": "Le membre n'est trouvée",
+    "unmute": "**${membre}** a été **untempmute** après `{duration}` de mute.",
+    "aucuneraison": "Aucune raison",
+    "impossible": "Je n'ai pas les permissions de le mute.",
+    "raison": "Fin du mute",
+    "duréé": "Veuillez indiquer une durée !",
+    "temps": "Le temps ne doit pas être supérieur à 28 jours !",
+    "invalidetemps": "Le temps indiqué est invalide !",
+    "invalideforma": "La durée du mute n'est pas correcte !\n\n*Aide :*\n> Jours : `d`\n> Heures : `h`\n> Minutes : `m`\n> Secondes : `s`",
+    "message1": "à mute",
+    "message2": "pour"
+  },
+  "untempmute": {
+    "unmute": "`{membre}` a été **untempmute** par `{author}`",
+    "message1": "à unmute"
+  },
+  "joinvc": {
+    "join": "J'ai bien rejoins votre vocal.",
+    "erreur": "Vous devez être dans un channel vocal.",
+    "dejavoc": "Je suis déjà dans une vocal !"
+  },
+  "prevname": {
+    "nouser": "Utilisateur non trouvé.",
+    "recherche": "Recherche dans l'API...",
+    "title": "Prevnames",
+    "nopseudo": "Aucun pseudo trouvé.",
+    "footer": "Totals des Prevnames dans L'API : ",
+    "buttonreply": "Message bien supprimé"
+  },
+  "vocallog": {
+    "message1": "Les logs vocaux seront maintenant envoyés dans",
+    "message2": "Les logs vocaux sont maintenant désactivés",
+    "message3": "Tous les joins/leaves dans",
+    "message4": "seront désormais ignorés par les **logs-vocaux**",
+    "message5": "ne sont pas ignorés",
+    "message6": "ne seront plus ignorés par les **logs-vocaux**",
+    "message7": "a rejoint le salon",
+    "message8": "a quitté le salon",
+    "message9": "et a rejoint",
+    "mute": "mute",
+    "unmute": "unmute",
+    "micro": "micro",
+    "casque": "casque",
+    "dans": "dans",
+    "viens": "vient de se",
+    "stream": "vient de se",
+    "unstream": "vient de se",
+    "maintenant": "est maintenant en",
+    "joins": "a rejoins",
+    "leave": "a quitter"
+  },
+  "wl": {
+    "message1": "a été ajouté à la whitelist",
+    "aucun": "Aucune personne dans la whitelist",
+    "message2": "Aucunes personnes ont été supprimées",
+    "message3": "Aucune personne a été supprimée",
+    "message4": "de la whitelist",
+    "message5": "a été retiré de la whitelist"
+  },
+  "uptime": {
+    "message1": "Uptime du Bot : "
+  },
+  "checkversion": {
+    "message1": "La version actuelle de votre bot est :"
+  },
+  "antilink": {
+    "message1": "L'antilink est déjà activé.",
+    "message2": "L'antilink est maintenant activé.",
+    "message3": "L'antilink est déjà désactivé.",
+    "message4": "L'antilink est maintenant désactivé.",
+    "message5": "L'antilink est déjà au maximum.",
+    "message6": "L'antilink est maintenant au maximum.",
+    "message7": "L'antilink ignore déjà",
+    "message8": "L'antilink ignore désormais",
+    "message9": "L'antilink est déjà désactivé sur",
+    "message10": "L'antilink n'ignore désormais plus",
+    "message11": "L'antilink est déjà réglé sur `all`.",
+    "message12": "L'antilink est maintenant sur `all`.",
+    "message13": "L'antilink est déjà réglé sur `invites`.",
+    "message14": "L'antilink est maintenant sur `invites`.",
+    "not": "vous n'avez aucune autorisation pour envoyer des liens ici."
+  },
+  "presetlog": {
+    "message1": "Création des salons en cours...",
+    "message2": "Création terminée avec succès !",
+    "erreur": "Une erreur est survenue lors de la création de la catégorie et des salons"
+  },
+  "punish": {
+    "message1": "La punition en cas de **__raid__** sera désormais",
+    "message2": "La punition du module d'antiraid",
+    "message3": "sera désormais"
+  },
+  "clear": {
+    "nombre": "Veuillez spécifier un nombre entre 1 et 100",
+    "clear": "J'ai supprimé {deletedCount} message(s) !"
+  },
+  "antibot": {
+    "message1": "L'antibot est déjà réglé activé.",
+    "message2": "L'antibot est désormais activé.",
+    "message3": "L'antibot est déjà réglé désactivé.",
+    "message4": "L'antibot est désormais désactivé.",
+    "message5": "L'antibot est déjà réglé au maximum.",
+    "message6": "L'antibot est désormais au maximum.",
+    "message7": "a tenté d'ajouter un bot sur le serveur nommé"
+  },
+  "raidping": {
+    "message1": "Le pingraid est désormais désactivé.",
+    "message2": "Le pingraid est déjà désactivé.",
+    "message3": "Le pingraid est désormais activé sur",
+    "message4": "Le rôle n'existe pas ou est invalide.",
+    "message5": "Le rôle a avertir en cas de raid est désormais activé sur le rôle: ",
+    "message7": "Le pingraid est déjà réglé activé."
+  },
+  "logs": {
+    "message1": "Non activer",
+    "message2": "Log de Raid :",
+    "message3": "Log des messages :",
+    "message4": "Log voice :",
+    "message5": "Log de modération :",
+    "message6": "Log de joins / leave :"
+  },
+  "massrole": {
+    "message1": "Le rôle",
+    "message2": "a été ajouté à",
+    "message3": "membres",
+    "message4": "a **massrole** le rôle",
+    "message5": "a été retiré à",
+    "message6": "a **unmassrole** le rôle"
+  },
+  "noperm": {
+    "originale": "Modification du message en cours...",
+    "set": "Le message sera donc :",
+    "erreur": "Veuillez spécifier un message.",
+    "reset": "Message réinitialisé avec succès !"
+  },
+  "resetbot": {
+    "reset": "Les données du bot ont été supprimées avec succès !",
+    "message": "Voulez-vous vraiment supprimer toutes les données du bot ?",
+    "noreset": "Je ne supprimerai pas mes données.",
+    "erreur": "Une erreur s'est produite."
+  },
+  "embed": {
+    "time": "Vous avez pris trop de temps pour répondre.",
+    "aucun": "aucun",
+    "link": "Image ou lien invalide.",
+    "message1": "Voulez-vous vraiment ajouter un **timestamp** à votre embed ? Oui/Non.",
+    "message2": "Veuillez donner un nombre valide.",
+    "message3": "Quel est le numéro du field à retiré ?",
+    "message4": "Il n'y a aucun field.",
+    "message5": "Quel est **le titre** du field que vous voulez ajouter à l'embed.",
+    "message6": "Quel est **la description** du field que vous voulez ajouter à l'embed.",
+    "long": "Nom trop long.",
+    "message7": "Quel est **l'image d'auteur** de votre embed ? Si vous ne voulez pas envoyez `aucun`.",
+    "message8": "Quel est **l'auteur** que vous-voulez ajouter à votre embed ?",
+    "message9": "Quel est **l'image de footer** de votre embed ? Si vous ne voulez pas envoyez `aucun`.",
+    "message10": "Quel est **le footer** que vous-voulez ajouter à votre embed ?",
+    "message11": "Quelle est **la couleur** que vous-voulez ajouter à votre embed ?\n ```- noir\n- blanc\n- jaune\n- bleu\n- violet\n- gris\n- orange\n- vert\n- rouge\n- maron\n- rose\n- beige```",
+    "message12": "Quel  est **le thumbnail** que vous-voulez ajouter à votre embed ?",
+    "message13": "Quelle est **l'image** que vous-voulez ajouter à votre embed ?",
+    "message14": "Quelle est **la description** que vous-voulez ajouter à votre embed ?",
+    "message15": "Quel est **le titre** que vous-voulez ajouter à votre embed ?",
+    "message16": "Veuillez m'indiquer un salon.",
+    "message17": "L'embed a bien été envoyé dans",
+    "copyembed": "Copier un embed",
+    "messages19": "Quel est le channel ou se trouve l'embed ?",
+    "messages20": "Quel est le message de l'embed a copier ?",
+    "messages21": "Le channel donner est invalide."
+  },
+  "soutien": {
+    "chargement": "Chargement en cours...",
+    "reset": "`✅` les paramètres ont était bien reset",
+    "inconnue": {
+      "inconnue": "Inconnu",
+      "nostatus": "Aucun status définie",
+      "norole": "Aucun rôle défini"
+    },
+    "embed": {
+      "actif": "✅ Activer",
+      "desact": "❌ Désactiver",
+      "titre": "Panel Soutien",
+      "status": "Statut :",
+      "statusperso": "Status personalider :",
+      "role": "Rôles Soutien :",
+      "reset": "Reset",
+      "select": {
+        "status": "Status",
+        "role": "Rôles",
+        "statusperso": "Status personaliser"
+      }
+    },
+    "collector": {
+      "status": {
+        "nostatus": "Le syteme de status n'est pas configuré",
+        "role": "Les rôles",
+        "perso": "Le status personaliser",
+        "actif": "Le status a été activé avec succès",
+        "desact": "Le status a été désactivé avec succès",
+        "personalise": "Le paramétrage du soutien n'est pas fini. Voici ce qu'il reste à configurer :"
+      },
+      "role": {
+        "selectcontent": "Merci de choisir vos rôle !"
+      },
+      "statusperso": {
+        "question": "Quel sera le status a mettre ? (Exemple : .gg/astroia)",
+        "erreur": "Une erreur vient de se produire",
+        "temps": "Temps de réponse expiré ou une erreur s'est produite."
+      }
+    }
+  },
+  "mp": {
+    "erreuruse": "Utilisez : `{prefix}mp @lapersonne <message / embed <id de l'embed>>`",
+    "nouser": "Utilisateur non trouvé.",
+    "embedinvalide": "L'ID de l'embed spécifié est invalide.",
+    "send": "Message envoyé.",
+    "erreur": "Une erreur est survenue"
+  },
+  "joinleavelog": {
+    "message1": "Les logs de joins/leaves seront maintenant envoyés dans",
+    "message2": "Les logs de joins/leaves sont maintenant désactivés.",
+    "message3": "Les logs de joins/leaves sont déjà activés.",
+    "message4": "Les logs de joins/leaves sont déjà désactivés."
+  },
+  "kick": {
+    "kick": "à était kick pour la raison :",
+    "user": "Utilisateur non trouvé.",
+    "akick": "a kick",
+    "rkick": "pour la raison :",
+    "aucuneraison": "Aucune raison.",
+    "pasexpulser": "Je ne peux pas exclure cette personne"
+  },
+  "boostlog": {
+    "message1": "Les logs boost(s) seront maintenant envoyés dans",
+    "message2": "Les logs boost(s) sont maintenant désactivés"
+  }
+}
