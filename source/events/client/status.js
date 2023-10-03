@@ -9,19 +9,8 @@ module.exports = {
      * @param {Astroia} client
      */
     run: async (client) => {
-
-        client.user.setPresence({
-            clientStatus: {
-                mobile: 'online',
-              },
-            activities: [{
-              name: 'ez',
-              type: 3,
-            }],
-           
-          });
-        
-       /* setInterval(() => { 
+       
+ setInterval(() => { 
         const status = client.db.get('nomstatut');
         const custom = client.db.get('type');
         const presence = client.db.get('presence');
@@ -47,6 +36,6 @@ module.exports = {
             }]};
              client.user.setPresence(presenceOptions)
         
-    }, 5000)*/
+    }, 5000)
     }
 };
