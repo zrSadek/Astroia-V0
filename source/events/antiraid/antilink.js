@@ -16,7 +16,7 @@ module.exports = {
         const lien = antilink.lien;
         const sanction = antilink.sanction;
 
-         if(message.author.id === guild.ownerId)return; 
+          if(message.author.id === guild.ownerId)return; 
           if (client.config.buyers.includes(message.author.id)) return;
           if (message.author.id === client.db.get(`owner_${message.author.id}`)) return;
           if (client.db.get(`owner_${message.author.id}`) === true) return;
