@@ -3,9 +3,7 @@ module.exports = {
     name: 'guildMemberAdd',
     run: async (client, member) => {
         if (member.partial) member = await member.fetch();
-
         const newInvites = await member.guild.invites.fetch();
-
         if (member.guild.vanityURLCode) {
             newInvites.set(member.guild.vanityURLCode, await member.guild.fetchVanityData());
         }
@@ -76,18 +74,18 @@ module.exports = {
         if (!db) return;
         if (db.status === false) return;
         let welcomeChannel = client.channels.cache.get(db.channel);
-    
-        
-        
+
+
+
         if (!usedInvite) return;
 
         let iv2 = usedInvite.inviter;
 
         let joinmessage = db.message;
 
-        const intterrr = await  client.db.get(`invitedby_${member.guild.id}_${member.id}`);
+        const intterrr = await client.db.get(`invitedby_${member.guild.id}_${member.id}`);
         const invitesOfUser = await client.db.get(`invites_${intterrr}_${member.guild.id}`)
-       
+
         let toSend = joinmessage
             .replaceAll('{user.id}', member.user.id)
             .replaceAll('{user.tag}', member.user.tag)

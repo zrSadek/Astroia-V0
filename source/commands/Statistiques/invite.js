@@ -36,7 +36,7 @@ module.exports = {
                 .setColor(client.color)
                 .setTitle(`Vos invitations`)
                 .setFooter(client.footer)
-                .setDescription(`\`📮Total :\` **${invitesData.total}**\n\`✅ Présents :\` **${invitesData.valid}**\n\`❌ Leave :\` **${invitesData.left}**\n\`🎯Bonus :\` **${invitesData.bonus}**`);
+                .setDescription(`\`📮Total :\` **${invitesData.total + invitesData.bonus}**\n\`✅ Présents :\` **${invitesData.valid}**\n\`❌ Leave :\` **${invitesData.left}**\n\`🎯Bonus :\` **${invitesData.bonus}**`);
             message.channel.send({ embeds: [embed] });
         
     }
