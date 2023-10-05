@@ -16,14 +16,14 @@ module.exports = {
                     if (!giveawayData.ended && giveawayData.temps) {
                         const endTime = giveawayData.temps;
                         if (endTime <= now) {
+                            const guild = client.guilds.cache.get(guildId);
+                            const giveawayChannel = guild.channels.cache.get(giveawayData.channel);
                             const participants = giveawayData.participant;
-
+                            const message = await giveawayChannel.messages.fetch(giveawayData.messageid);
+                            if(!message)return;
                             if (participants.length === 0) {
-                                const guild = client.guilds.cache.get(guildId);
                                 if (guild) {
-                                    const giveawayChannel = guild.channels.cache.get(giveawayData.channel);
                                     if (giveawayChannel) {
-                                        const message = await giveawayChannel.messages.fetch(giveawayData.messageid);
                                         const embed = new Discord.EmbedBuilder(message.embeds[0]);
                                         embed.setTitle('Giveaway Terminé');
                                         embed.setDescription('Aucun participant. Le giveaway a été annulé.');
@@ -95,7 +95,7 @@ module.exports = {
                                             await message.edit({ embeds: [embed], components: [row] });
                                             message.reply("Aucune personne n'a respecter les conditions du giveaway")
                                             giveawayData.ended = true;
-                                            client.db.set(`giveaway_${guildId}_${code}`, JSON.stringify(giveawayData));
+                                            client.db.set(`giveaway_${guildId}_${code}`, giveawayData);
                                             break;
                                         }
                                         const embed = new Discord.EmbedBuilder(message.embeds[0]);
@@ -114,6 +114,7 @@ module.exports = {
                                                     .setCustomId('giveaway_list_' + code)
                                                     .setStyle(Discord.ButtonStyle.Secondary)
                                             );
+                                            message.reply(`Félicitations ${winners.join(', ')} ! Vous avez gagné le ${giveawayData.prix}`)
                                         await message.edit({ embeds: [embed], components: [row] });
 
                                         giveawayData.ended = true;

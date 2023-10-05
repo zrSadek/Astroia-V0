@@ -36,7 +36,7 @@ module.exports = {
                     prix: 'un prix',
                     gagnant: 1,
                     temps: null,
-                    channel: null,
+                    channel: message.channel.id,
                     vocal: false,
                     predef: null,
                     participant: [],
@@ -355,7 +355,7 @@ module.exports = {
                                 };
                     
                                 client.db.set(`giveaway_${message.guild.id}_${code}`, newGiveawayData);
-                                client.db.delete(`setgiveaway_${message.guild.id}`)
+                                //client.db.delete(`setgiveaway_${message.guild.id}`)
 
                         
                     } else {
