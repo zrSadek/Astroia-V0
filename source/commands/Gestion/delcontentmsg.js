@@ -1,11 +1,7 @@
-const Discord = require('discord.js');
-const Astroia = require('../../structures/client/index');
-
 module.exports = {
-    name: "addrole",
-    description: "Permet d'ajouter un rôle à un membre.",
-    usages: "addrole <membre> <nom-du-rôle>",
-    run: async (client, message, args, commandName) => {
+    name: 'deletecontentmessage',
+    description: 'Supprime le contentmessage pour le channel.',
+    run: async (client, message, args) => {
         let pass = false;
         let staff = client.staff;
         if (!staff.includes(message.author.id) && !client.config.buyers.includes(message.author.id) && client.db.get(`owner_${message.author.id}`) !== true) {
@@ -26,35 +22,17 @@ module.exports = {
                 return;
             }
         }
-
-        if (args.length < 2) {
-            return message.channel.send("Usage incorrect. Utilisation correcte : addrole <membre> <nom-du-r�le>");
-        }
-
-        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-        if (!member) {
-            member = message.guild.members.cache.get(args[0]);
-            if (!member) {
-                return message.channel.send("Membre introuvable sur le serveur.");
-            }
-        }
-
-        const roleName = args.slice(1).join(" ");
-        const role = message.guild.roles.cache.find(role => role.name === roleName);
-        if (!role) {
-            return message.channel.send("Rôle introuvable sur le serveur.");
-        }
-
-        if (member.roles.cache.has(role.id)) {
-            return message.channel.send(`${member.user.tag} a déjà le rôle ${roleName}.`);
+        const savedData = await client.db.get(`constentmsg_${message.guild.id}_${message.channel.id}`);
+        if (!savedData) {
+            return message.channel.send('Aucun contentmessage enregistré pour ce channel.');
         }
 
         try {
-            await member.roles.add(role);
-            message.channel.send(`${member.user.tag} vient de recevoir le rôle : ${roleName}.`);
+            await client.db.delete(`constentmsg_${message.guild.id}_${message.channel.id}`);
+            message.channel.send('Le contentmessage a été supprimé avec succès.');
         } catch (error) {
-            console.error(error);
-            message.channel.send("Une erreur vient de se produire.");
+            console.error(error.message);
+            message.channel.send('Une erreur s\'est produite.');
         }
     }
 }

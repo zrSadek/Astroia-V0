@@ -478,5 +478,8 @@
   "boostlog": {
     "message1": "Les logs boost(s) seront maintenant envoyés dans",
     "message2": "Les logs boost(s) sont maintenant désactivés"
+  }, 
+  "helpall": {
+    "nocmd": "Aucune commande"
   }
 }

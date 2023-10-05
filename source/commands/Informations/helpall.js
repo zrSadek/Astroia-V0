@@ -6,7 +6,6 @@ module.exports = {
     
     run: async (client, message, args, commandName) => {
         const color = client.color;
-        const prefix = client.prefix;
         const footer = client.footer;
         let pass = false 
         let staff = client.staff
@@ -43,14 +42,14 @@ module.exports = {
             else if (perm === "5") perm_5.push(m.name);
         });
 
-        function getMessageContent(page) {
+       async function getMessageContent(page) {
             let commands;
             let permission;
 
             switch (page) {
                 case 0:
                     commands = perm_public;
-                    permission = "Permission publique";
+                    permission = "Permission Publique";
                     break;
                 case 1:
                     commands = perm_1;
@@ -82,12 +81,16 @@ module.exports = {
                 .setTitle(permission)
                 .setColor(color)
                 .setFooter(footer)
-                .setDescription(commands.length > 0 ? commands.map(cmdn => `\`${cmdn}\``).join("\n") : "Aucune commande");
-        }
+                .setDescription(`\`\`\`yml\n${commands.length > 0 ? commands.map((cmdn, index) => `${index + 1}. ${cmdn}`).join("\n") : await client.lang('helpall.nocmd')}\`\`\``);
+            }
+
+        let currentPage = 0;
+        let messageContent = await getMessageContent(currentPage);
 
         let prevButton = new Discord.ButtonBuilder()
             .setCustomId('prev_button'+ message.id )
             .setLabel('<<<')
+            .setDisabled(currentPage === 0)
             .setStyle(Discord.ButtonStyle.Primary)
 
         let nextButton = new Discord.ButtonBuilder()
@@ -97,8 +100,7 @@ module.exports = {
 
         let row = new Discord.ActionRowBuilder()
             .addComponents(prevButton, nextButton);
-        let currentPage = 0;
-        let messageContent = getMessageContent(currentPage);
+    
         let helpMessage = await message.channel.send({ embeds: [messageContent], components: [row] });
 
         const filter = (interaction) => interaction.user.id === message.author.id;
@@ -108,13 +110,13 @@ module.exports = {
             if (interaction.customId === 'prev_button' + message.id) {
                 if (currentPage > 0) {
                     currentPage--;
-                    messageContent = getMessageContent(currentPage);
+                    messageContent = await getMessageContent(currentPage);
                     await interaction.update({ embeds: [messageContent], components: [getRow(currentPage)] });
                 }
             } else if (interaction.customId === 'next_button' + message.id) {
                 if (currentPage < 5) {
                     currentPage++;
-                    messageContent = getMessageContent(currentPage);
+                    messageContent = await getMessageContent(currentPage);
                     await interaction.update({ embeds: [messageContent], components: [getRow(currentPage)] });
                 }
             }

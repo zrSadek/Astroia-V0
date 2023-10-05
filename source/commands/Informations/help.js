@@ -1,10 +1,19 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-
+const {Astroia} = require('../../structures/client/index')
 module.exports = {
     name: "help",
     description: "Affiche les commandes du bot",
+    /**
+     * 
+     * @param {Astroia} client 
+     * @param {Astroia} message 
+     * @param {Astroia} args 
+     * @param {Astroia} commandName 
+     * @returns 
+     */
     run: async (client, message, args, commandName) => {
+        
         let pass = false
         let staff = client.staff
         if(!staff.includes(message.author.id) && !client.config.buyers.includes(message.author.id) && client.db.get(`owner_${message.author.id}`) !== true){
@@ -26,8 +35,9 @@ module.exports = {
         let color = client.color;
         let footer = client.footer;
         let prefix = client.prefix;
-        const help = client.db.get(`sethelp_${message.guild.id}`) || "select";
+        const help = client.db.get(`sethelp_${message.guild.id}`) || "onepage";
         if (args.length === 0) {
+           
             if (help === 'onepage') {
                 const commandFolders = fs.readdirSync('./source/commands');
                 const formattedCategories = [];
@@ -116,13 +126,13 @@ module.exports = {
 
         if (args.length !== 0) {
             const cmdname = args[0]
+            console.log(client.commands.get(cmdname))
             const command = client.commands.get(cmdname) || client.commands.find((cmd) => cmd.aliases.includes(cmdname));
             if (!command) {
                 return message.reply(`Cette commande n'existe pas. Utilisez \`${prefix}help\` pour voir la liste des commandes.`);
             }
             const perm = client.db.get(`perm_${commandName}.${message.guild.id}`)
             const permissions = await perms(perm)
-            console.log(permissions)
             const embed = new Discord.EmbedBuilder()
                 .setTitle(`Information de \`${command.name}\``)
                 .setColor(color)
