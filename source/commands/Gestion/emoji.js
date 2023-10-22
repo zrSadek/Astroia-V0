@@ -25,24 +25,24 @@ module.exports = {
 
         const emojiRegex = /<a?:[a-zA-Z0-9_]+:(\d+)>/;
         const totalEmojis = args.length;
-        let createdEmojis = 0;
+        let creeemojis = 0;
 
         const msg = await message.channel.send("Merci de bien patienter pendant la création des emojis...");
 
         for (const rawEmoji of args) {
-            const emojiMatch = rawEmoji.match(emojiRegex);
+            const emojiss = rawEmoji.match(emojiRegex);
 
-            if (emojiMatch) {
-                const emojiId = emojiMatch[1];
+            if (emojiss) {
+                const emojiId = emojiss[1];
                 const extension = rawEmoji.startsWith("<a:") ? ".gif" : ".png";
                 const url = `https://cdn.discordapp.com/emojis/${emojiId + extension}`;
 
                 message.guild.emojis.create({ attachment: url, name: emojiId })
                     .then((emoji) => {
-                        createdEmojis++;
+                        creeemojis++;
 
-                        if (createdEmojis === totalEmojis) {
-                            msg.edit(`La création des emojis est terminée, nombre d'emojis créés : ${createdEmojis}`);
+                        if (creeemojis === totalEmojis) {
+                            msg.edit(`La création des emojis est terminée, nombre d'emojis créés : ${creeemojis}`);
                         }
                     })
                     .catch((error) => {

@@ -60,7 +60,7 @@ module.exports = {
         });
       } catch (error) {
         console.error(error);
-        message.channel.send(`Une erreur est survenue lors du traitement de la commande`);
+        message.channel.send(`Une erreur est survenue`);
       }
     }
 };
