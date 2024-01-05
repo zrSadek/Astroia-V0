@@ -4,6 +4,7 @@
     "astroia-manager": "^1.0.0",
     "axios": "^1.4.0",
     "child-process": "^1.0.2",
+    "discord-html-transcripts": "^3.2.0",
     "discord-player": "^6.6.3",
     "discord.js": "^14.13.0",
     "ffmpeg-static": "^5.2.0",

@@ -106,7 +106,7 @@ module.exports = {
                 await interaction.editReply({ content: `Ticket open <#${channel?.id}>` });
                 const embed = new Discord.EmbedBuilder()
                     .setColor(color)
-                    .setFooter(client.config.footer)
+                    .setFooter(client.footer)
                     .setDescription(option.message)
                     .setTitle('Ticket ouvert par ' + interaction.user.username)
 

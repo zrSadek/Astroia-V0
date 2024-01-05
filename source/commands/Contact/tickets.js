@@ -41,7 +41,7 @@ module.exports = {
             const embed = new Discord.EmbedBuilder()
                 .setTitle("Paramètres des tickets")
                 .setColor(client.color)
-                .setFooter(client.config.footer)
+                .setFooter(client.footer)
                 .addFields({ name: "Salon", value: `${client.channels.cache.get(db.salon) || "Aucun"}`, inline: true, inline: true })
                 .addFields({ name: "Message", value: `${db.messageauto || "Message automatique"}`, inline: true })
                 .addFields({ name: "Type", value: `${modules}`, inline: true })
@@ -167,7 +167,7 @@ module.exports = {
                     .setTitle('Tickets')
                     .setDescription('Utiliser ce menu pour créer un ticket et contacter le staff')
                     .setColor(client.color)
-                    .setFooter(client.config.footer)
+                    .setFooter(client.footer)
                 if (dbone.type === "button") {
                     const buttons = [];
                     dbone.option.forEach(option => {

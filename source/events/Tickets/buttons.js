@@ -62,7 +62,7 @@ module.exports = {
             const channelticket = interaction.guild.channels.cache.get(interaction.channel.id);
             const attachment = await discordTranscripts.createTranscript(channelticket);
             if (channel) {
-                const embed = new Discord.EmbedBuilder().setColor(color).setFooter(client.config.footer).setAuthor({ name: (await user).username + ' ' + (await user).id, iconURL: (await user).avatarURL() }).setTimestamp().setTitle('Ticket Fermé par ' + interaction.user.username)
+                const embed = new Discord.EmbedBuilder().setColor(color).setFooter(client.footer).setAuthor({ name: (await user).username + ' ' + (await user).id, iconURL: (await user).avatarURL() }).setTimestamp().setTitle('Ticket Fermé par ' + interaction.user.username)
 
                 channel.send({
                     files: [attachment],
