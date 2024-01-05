@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "@distube/ytdl-core": "^4.13.0",
-    "astroia-manager": "^1.0.0",
     "axios": "^1.4.0",
     "child-process": "^1.0.2",
     "discord-html-transcripts": "^3.2.0",
