@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const { bot } = require('../../structures/client');
 const fs = require('fs');
 const Astroia = require('../../structures/client');
-
 module.exports = {
     name: "protect",
     aliases: ["secur", "security", "sec", "protections", "protection"],

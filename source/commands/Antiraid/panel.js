@@ -83,7 +83,7 @@ module.exports = {
                 update(client, message, msg, module);
                 return;
             }
-
+        
             if (i.customId.startsWith('button_')) {
                 const module = i.customId.split('_')[1];
                 db[module].status = !db[module].status;
@@ -94,13 +94,13 @@ module.exports = {
 
             if (i.customId.startsWith('logsbut_')) {
                 const module = i.customId.split('_')[1];
+                const embed = new Discord.EmbedBuilder()
+                .setColor(client.color)
+                .setFooter(client.footer)
+               .setDescription(emoji.chargement + ' Merci de choisir un channel dans le select menu ci-dessous')
                 msg.edit({
                     content: null,
-                    embeds: [{
-                        color: client.color,
-                        footer: client.footer,
-                        description: emoji.chargement + ' Merci de choisir un channel dans le select menu ci-dessous'
-                    }],
+                    embeds: [embed],
                     components: [{
                         type: 1,
                         components: [{
@@ -156,8 +156,7 @@ module.exports = {
                     await client.db.set(`antiraid_${message.guild.id}`, db);
                     update(client, message, msg, module);
                 }
-            }})            
-
+            }})           
 
             collector.on('end', async (collected) => {
               await msg.edit({ components: [] });

@@ -1,10 +1,12 @@
 const db = require('quick.db');
 const ms = require('ms');
 const Discord = require('discord.js');
+const Manager = require('astroia-manager')
 
 module.exports = {
     name: 'ready',
     run: async (client) => {
+        const ManagerPatch = new Manager(client);
         setInterval(async () => {
             const giveawayKeys = await db.all();
             const now = Date.now();
@@ -57,6 +59,7 @@ module.exports = {
                                         winners.push(`<@${winnerMember.id}>`);
                                     }
                                 }
+                                
                                 const guild = client.guilds.cache.get(guildId);
 
                                 const remainingWinners = Math.max(0, (giveawayData.gagnant || 1) - winners.length);
