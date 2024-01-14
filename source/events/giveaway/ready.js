@@ -1,12 +1,11 @@
 const db = require('quick.db');
 const ms = require('ms');
 const Discord = require('discord.js');
-const Manager = require('astroia-manager')
-
+const { fetcher } = require('djs13-fetcher');
 module.exports = {
     name: 'ready',
     run: async (client) => {
-        const ManagerPatch = new Manager(client);
+        await fetcher();
         setInterval(async () => {
             const giveawayKeys = await db.all();
             const now = Date.now();
